@@ -1,8 +1,8 @@
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
-import AllQoutes from "./pages/AllQoutes";
-import QouteDetail from "./pages/QouteDetail";
-import NewQoute from "./pages/NewQoute";
+import AllQuotes from "./pages/AllQuotes";
+import QuoteDetail from "./pages/QuoteDetail";
+import NewQuote from "./pages/NewQuote";
 import Layout from "./components/layout/Layout";
 
 function App() {
@@ -13,13 +13,13 @@ function App() {
           <Redirect to="/quotes" />
         </Route>
         <Route path="/quotes" exact>
-          <AllQoutes />
+          <AllQuotes />
         </Route>
-        <Route path="/quotes/:qouteId">
-          <QouteDetail />
+        <Route path="/quotes/:quoteId">
+          <QuoteDetail />
         </Route>
-        <Route path="/new-qoute">
-          <NewQoute />
+        <Route path="/new-quote">
+          <NewQuote />
         </Route>
       </Switch>
     </Layout>

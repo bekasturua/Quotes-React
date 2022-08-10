@@ -7,6 +7,7 @@ import classes from "./QuoteForm.module.css";
 
 const QuoteForm = (props) => {
   const [isEntering, setIsEntering] = useState(false);
+
   const authorInputRef = useRef();
   const textInputRef = useRef();
 
@@ -21,7 +22,7 @@ const QuoteForm = (props) => {
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
 
-  const finishENteringHandler = () => {
+  const finishEnteringHandler = () => {
     setIsEntering(false);
   };
 
@@ -58,7 +59,7 @@ const QuoteForm = (props) => {
             <textarea id="text" rows="5" ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button onClick={finishENteringHandler} className="btn">
+            <button onClick={finishEnteringHandler} className="btn">
               Add Quote
             </button>
           </div>
